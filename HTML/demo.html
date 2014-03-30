@@ -324,8 +324,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 						</h1>
 						<!-- <h4 id="home-h3">Easily manage and save money on your Insurance</h4> -->
 						<br/><br/>
-						<div style="color: #ff530d;">
-  							<table style="width:100%;margin-left:auto;margin-right:auto;color:white;margin-bottom:25px;text-align:center">
+						<form id='quotesform' method="post">
+						<div style="color: #ff530d;">  							
+							<table style="width:100%;margin-left:auto;margin-right:auto;color:white;margin-bottom:25px;text-align:center">
 								<tbody>
 									<tr>
 										<td width="55%" style="margin-left:auto;margin-right:auto;text-align:center">
@@ -335,8 +336,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 								</tbody>
 							</table>
 							
-							<a class="button huge shortcode" href="#a" onclick="scrollTo('basicDetails');">Go !</a>
+							<a class="button huge shortcode" href="#a" onclick="gotoNext();">Go !</a>
 						</div>
+						</form>
 					</div>
 				</div>
 
@@ -888,6 +890,13 @@ window.onload = function(){
 			});
 		*/
 	});
+	function gotoNext(){
+		if(jQuery('#zip-input').val()==''){
+			alert('Please enter ZIP to get started !!!');
+			return false;
+		}
+		jQuery('#quotesform').attr('action','info.html').submit();
+	}
 </script>
 </body>
 </html>
