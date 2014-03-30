@@ -229,17 +229,17 @@ float: left !important;
 
 .big{
 	position:fixed !important;
-	top:10px !important;
+	top:0px !important;
 	height:100px !important;
 	line-height:80px !important;
 	color:white !important;
 	z-index:105;
-	background-color:rgba(0,0,0,0.1) !important;
+	background-color:rgba(0,0,0,0.3) !important;
 }
 
 .small{
 	position:fixed !important;
-	top:10px !important;
+	top:0px !important;
 	height:50px !important;
 	line-height:40px !important;
 	color:white !important;
